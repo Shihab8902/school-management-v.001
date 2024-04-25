@@ -5,6 +5,8 @@ import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Toggler from '../../Components/Toggler/Toggler';
+
 
 const Login = () => {
 
@@ -12,7 +14,8 @@ const Login = () => {
 
 
 
-    return <div className="min-h-screen bg-white dark:bg-slate-900 lg:bg-gray-100 lg:dark:bg-[#18181B] flex justify-center items-center ">
+    return <div className="min-h-screen   bg-white dark:bg-slate-900 lg:bg-gray-100 lg:dark:bg-[#18181B] flex justify-center items-center ">
+
         <div className=" md:w-8/12  w-full bg-transparent grid min-h-screen lg:grid-cols-2 p-5 md:p-10" >
             {/*Cover */}
             <div className="bg-[#008080] hidden lg:flex justify-center items-center rounded-tl-lg rounded-bl-lg shadow-lg shadow-[#00000012]">
@@ -24,11 +27,19 @@ const Login = () => {
             </div>
 
             {/* Form */}
-            <div className="bg-transparent  lg:bg-white lg:dark:bg-[#222831] rounded-tr-lg  lg:p-5 flex flex-col justify-center items-center rounded-br-lg lg:shadow-lg shadow-[#00000012] ">
+            <div className="bg-transparent relative lg:bg-white lg:dark:bg-[#222831] rounded-tr-lg  lg:p-5 flex flex-col justify-center items-center rounded-br-lg lg:shadow-lg shadow-[#00000012] ">
 
-                <div className=' w-full md:bg-gray-100 md:dark:bg-gray-900 md:p-6 rounded-md '>
+                <div className="absolute md:hidden lg:block right-4 top-4" >
+                    <Toggler size={24} />
+                </div>
+
+
+                <div className=' w-full relative md:bg-gray-100 md:dark:bg-gray-900 md:p-6 rounded-md '>
                     <div className='lg:hidden mb-6'>
                         <img src={logo} className='w-20 mx-auto' alt="Nolua Primary Government School" />
+                    </div>
+                    <div className="absolute hidden md:block lg:hidden right-4 top-4" >
+                        <Toggler size={24} />
                     </div>
                     <form >
 
