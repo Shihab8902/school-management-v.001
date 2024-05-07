@@ -41,8 +41,10 @@ const Login = () => {
                     <div className="absolute hidden md:block lg:hidden right-4 top-4" >
                         <Toggler size={24} />
                     </div>
-                    <form >
 
+
+                    <form >
+                        {/* Email */}
                         <div className='mb-5'>
                             <label htmlFor="email" className='font-semibold text-black dark:text-white text-sm mb-2 block'>Email</label>
                             <div className='flex items-center w-full bg-gray-200 dark:bg-gray-700 px-3  rounded-md '>
@@ -51,6 +53,7 @@ const Login = () => {
                             </div>
                         </div>
 
+                        {/* Password */}
                         <div >
                             <label htmlFor="password" className='font-semibold text-black dark:text-white text-sm mb-2 block'>Password</label>
                             <div className='flex items-center w-full gap-2 bg-gray-200 dark:bg-gray-700 px-3  rounded-md '>
@@ -67,7 +70,7 @@ const Login = () => {
                         </div>
 
                     </form>
-                    <p className='text-center mt-3 text-[13px] text-black dark:text-white font-semibold'>Don't have an account? <Link className='underline hover:opacity-90' to="/">Register.</Link></p>
+                    <p className='text-center mt-3 text-[13px] text-black dark:text-white font-semibold'>Don't have an account? <Link className='underline hover:opacity-90' to="/register">Register.</Link></p>
                 </div>
             </div>
         </div>

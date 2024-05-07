@@ -1,9 +1,10 @@
-import Login from "../Pages/Login/Login"
+import { Outlet } from "react-router-dom"
+
 
 const Root = () => {
     return <>
 
-        <Login />
+        <Outlet />
     </>
 }
 
